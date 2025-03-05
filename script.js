@@ -1,4 +1,4 @@
-const socket = io('https://mochi-backend.onrender.com'); // Replace with your Render backend URL
+const socket = io('https://mochi-backend.onrender.com');
 
 const gridContainer = document.querySelector('.grid');
 const restartBtn = document.getElementById('restart-btn');
