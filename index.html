@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOCHI Multiplayer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>MOCHI</h1>
+    <div class="grid"></div>
+    <button id="restart-btn" class="btn">Restart</button>
+  </div>
+
+  <!-- Popup for New Game -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2 id="result-message"></h2>
+      <button id="new-game-btn" class="btn">New Game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
