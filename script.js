@@ -1,4 +1,4 @@
-const socket = io('https://mochi-backend.onrender.com');
+const socket = io('https://mochi-backend.onrender.com'); // Replace with your backend URL
 
 const gridContainer = document.querySelector('.grid');
 const restartBtn = document.getElementById('restart-btn');
@@ -53,7 +53,11 @@ function createBoard() {
       const cell = document.createElement('div');
       cell.dataset.row = i;
       cell.dataset.col = j;
-      cell.addEventListener('click', handleCellClick);
+      cell.textContent = board[i][j];
+      cell.style.color = board[i][j] === 'A' ? 'blue' : 'pink';
+      if (gameActive && board[i][j] === '') {
+        cell.addEventListener('click', handleCellClick);
+      }
       gridContainer.appendChild(cell);
     }
   }
