@@ -53,11 +53,7 @@ function createBoard() {
       const cell = document.createElement('div');
       cell.dataset.row = i;
       cell.dataset.col = j;
-      cell.textContent = board[i][j];
-      cell.style.color = board[i][j] === 'A' ? 'blue' : 'pink';
-      if (gameActive && board[i][j] === '') {
-        cell.addEventListener('click', handleCellClick);
-      }
+      cell.addEventListener('click', handleCellClick);
       gridContainer.appendChild(cell);
     }
   }
